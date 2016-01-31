@@ -1,0 +1,255 @@
+@charset "UTF-8";
+@import "font-awesome";
+@import "fonts";
+@import "bootstrap";
+@import "mixins";
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 50px;
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {margin-bottom: 80px;}
+  @media (max-width: @screen-xs-max) {margin-bottom: 150px;}
+}
+h2 {text-transform: uppercase;}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {height: 80px;}
+  @media (max-width: @screen-xs-max) {height: 150px;}
+  background-color: #f5f5f5;
+}
+a:hover, a:focus {text-decoration: none;}
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 30px 15px 0;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+header .container {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+#breadcrumbs {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  .breadcrumb {
+    margin-bottom: 0;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
+.content {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+code {font-size: 80%;}
+
+header {
+  z-index: 1;
+  position: relative;
+  .navbar {
+    background: rgba(230, 244, 255, 0.3);
+    border-bottom: 1px solid #D2D2D2;
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    box-shadow: none;
+    border-radius: 0;
+    .navbar-toggle {
+      border-color: #fff;
+      .icon-bar {
+        background-color: #fff;
+      }
+    }
+  }
+  .navbar-brand {
+    padding-top: 1px;
+    padding-bottom: 4px;
+    img {height: 45px;}
+    @media (min-width: @screen-md-min) {
+      img {
+        margin-left: 20px;
+      }
+    }
+  }
+  .navbar-default {
+    .navbar-nav {
+      >li {
+        >a {
+          color: #fff;
+          text-transform: uppercase;
+          @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          &:hover, &:focus {
+            color: #fff;
+          }
+        }
+        > .bg-color-1 {
+          &:hover, &:focus {background-color: @brand-primary;}
+        }
+        > .bg-color-2 {
+          &:hover, &:focus {background-color: @brand-success;}
+        }
+        > .bg-color-3 {
+          &:hover, &:focus {background-color: @brand-info;}
+        }
+        > .bg-color-4 {
+          &:hover, &:focus {background-color: @brand-warning;}
+        }
+        > .bg-color-5 {
+          &:hover, &:focus {background-color: @brand-danger;}
+        }
+        &:last-child {
+          background-color: @brand-danger;
+          a:hover, a:focus {background-color: darken(@brand-danger, 5%);}
+        }
+      }
+      > .active {
+        > a {
+          color: #fff;
+          .opacity(0.7);
+          background-color: transparent;
+          &:hover, &:focus {
+            color: #fff;
+            .opacity(0.7);
+          }
+        }
+      }
+    }
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+      .navbar-header {
+        width: 100%;
+        .navbar-brand {
+          display: block;
+          width: 100%;
+          img {margin: 0 auto;}
+        }
+      }
+      .navbar-right {
+        width: 100%;
+        text-align: center;
+        ul {
+          float: none;
+          display: inline-block;
+          margin-bottom: -5px;
+        }
+      }
+    }
+    @media (max-width: @screen-xs-max) {
+      .navbar-brand {
+        padding: 0;
+      }
+    }
+  }
+}
+footer {
+  background-color: #fafafa;
+  > .container-fluid, .container {
+    padding-right: 30px;
+    padding-left: 30px;
+    .row > div p {
+      margin: 5px 0;
+    }
+  }
+  .social {
+    margin-top: 10px;
+  }
+  @media (max-width: @screen-sm-max) {
+    .container-fluid, .container {
+      .row {
+        div {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.opacity1 {.opacity(0.1);}
+.opacity2 {.opacity(0.2);}
+.opacity3 {.opacity(0.3);}
+.opacity4 {.opacity(0.4);}
+.opacity5 {.opacity(0.5);}
+.opacity6 {.opacity(0.6);}
+.opacity7 {.opacity(0.7);}
+.opacity8 {.opacity(0.8);}
+.opacity9 {.opacity(0.9);}
+.hram-bg {
+  background: url("../img/hram-bg.jpg") no-repeat top center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.block-opacity {
+  background: rgba(230, 244, 255, 0.6);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+.menu-hram {
+  a {
+    text-transform: uppercase;
+    font-size: 14px;
+    @media (max-width: @screen-xs-max) {text-align: center;}
+  }
+}
+.main-rasp {
+  h2 {color: @brand-primary;}
+  .overflow-table {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
+.contact-block {
+  position: relative;
+  background-color: @brand-primary;
+  color: #fff;
+  padding: 10px 0 30px;
+  a {
+    color: #fff;
+    &:hover, &:focus {
+      color: darken(#fff, 10%);
+    }
+  }
+  .contacts, .feedback {
+    margin-top: 20px;
+    a {
+      .fa {
+        margin-right: 20px;
+        width: 20px;
+      }
+    }
+  }
+  .page-header {margin: 20px 0 20px;}
+  @media (max-width: @screen-sm-max) {
+    h2, .text-right {text-align: center;}
+    .contacts {
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .feedback {
+      label {text-align: left;}
+    }
+  }
+  @media (max-width: @screen-sm-max) {
+
+  }
+}
