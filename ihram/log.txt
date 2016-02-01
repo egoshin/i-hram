@@ -1,0 +1,210 @@
+Host: ihram.egoshin.net
+Date: 2016-01-31 15:52:42
+Module: Выгрузка массива $Array
+Array
+(
+    [TEXT] => Воскресная школа
+    [LINK] => /
+    [SELECTED] => 
+    [PERMISSION] => X
+    [ADDITIONAL_LINKS] => Array
+        (
+        )
+
+    [ITEM_TYPE] => D
+    [ITEM_INDEX] => 6
+    [PARAMS] => Array
+        (
+        )
+
+    [DEPTH_LEVEL] => 1
+    [IS_PARENT] => 
+)
+
+    include < CBitrixComponentTemplate::__IncludePHPTemplate < CBitrixComponentTemplate::IncludeTemplate < CBitrixComponent::showComponentTemplate < CBitrixComponent::includeComponentTemplate
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:708
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:800
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:657
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:605
+	/home/www/ihram.egoshin.net/shared/bitrix/components/bitrix/menu/component.php:373
+----------
+Host: ihram.egoshin.net
+Date: 2016-01-31 15:56:23
+Module: Выгрузка массива $Array
+Array
+(
+    [TEXT] => Воскресная школа
+    [LINK] => /
+    [SELECTED] => 
+    [PERMISSION] => X
+    [ADDITIONAL_LINKS] => Array
+        (
+        )
+
+    [ITEM_TYPE] => D
+    [ITEM_INDEX] => 6
+    [PARAMS] => Array
+        (
+        )
+
+    [DEPTH_LEVEL] => 1
+    [IS_PARENT] => 
+)
+
+    include < CBitrixComponentTemplate::__IncludePHPTemplate < CBitrixComponentTemplate::IncludeTemplate < CBitrixComponent::showComponentTemplate < CBitrixComponent::includeComponentTemplate
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:708
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:800
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:657
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:605
+	/home/www/ihram.egoshin.net/shared/bitrix/components/bitrix/menu/component.php:373
+----------
+Host: ihram.egoshin.net
+Date: 2016-01-31 15:58:25
+Module: Выгрузка массива $Array
+Array
+(
+    [TEXT] => Воскресная школа
+    [LINK] => /
+    [SELECTED] => 
+    [PERMISSION] => X
+    [ADDITIONAL_LINKS] => Array
+        (
+        )
+
+    [ITEM_TYPE] => D
+    [ITEM_INDEX] => 6
+    [PARAMS] => Array
+        (
+        )
+
+    [DEPTH_LEVEL] => 1
+    [IS_PARENT] => 
+)
+
+    include < CBitrixComponentTemplate::__IncludePHPTemplate < CBitrixComponentTemplate::IncludeTemplate < CBitrixComponent::showComponentTemplate < CBitrixComponent::includeComponentTemplate
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:708
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:800
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:657
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:605
+	/home/www/ihram.egoshin.net/shared/bitrix/components/bitrix/menu/component.php:373
+----------
+Host: ihram.egoshin.net
+Date: 2016-01-31 15:58:25
+Module: Выгрузка массива $Array
+Array
+(
+    [TEXT] => Воскресная школа
+    [LINK] => /
+    [SELECTED] => 
+    [PERMISSION] => X
+    [ADDITIONAL_LINKS] => Array
+        (
+        )
+
+    [ITEM_TYPE] => D
+    [ITEM_INDEX] => 6
+    [PARAMS] => Array
+        (
+        )
+
+    [DEPTH_LEVEL] => 1
+    [IS_PARENT] => 
+)
+
+    include < CBitrixComponentTemplate::__IncludePHPTemplate < CBitrixComponentTemplate::IncludeTemplate < CBitrixComponent::showComponentTemplate < CBitrixComponent::includeComponentTemplate
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:708
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:800
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:657
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:605
+	/home/www/ihram.egoshin.net/shared/bitrix/components/bitrix/menu/component.php:373
+----------
+Host: ihram.egoshin.net
+Date: 2016-01-31 15:59:20
+Module: Выгрузка массива $Array
+Array
+(
+    [TEXT] => Воскресная школа
+    [LINK] => /
+    [SELECTED] => 
+    [PERMISSION] => X
+    [ADDITIONAL_LINKS] => Array
+        (
+        )
+
+    [ITEM_TYPE] => D
+    [ITEM_INDEX] => 6
+    [PARAMS] => Array
+        (
+        )
+
+    [DEPTH_LEVEL] => 1
+    [IS_PARENT] => 
+)
+
+    include < CBitrixComponentTemplate::__IncludePHPTemplate < CBitrixComponentTemplate::IncludeTemplate < CBitrixComponent::showComponentTemplate < CBitrixComponent::includeComponentTemplate
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:708
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:800
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:657
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:605
+	/home/www/ihram.egoshin.net/shared/bitrix/components/bitrix/menu/component.php:373
+----------
+Host: ihram.egoshin.net
+Date: 2016-01-31 15:59:20
+Module: Выгрузка массива $Array
+Array
+(
+    [TEXT] => Воскресная школа
+    [LINK] => /
+    [SELECTED] => 
+    [PERMISSION] => X
+    [ADDITIONAL_LINKS] => Array
+        (
+        )
+
+    [ITEM_TYPE] => D
+    [ITEM_INDEX] => 6
+    [PARAMS] => Array
+        (
+        )
+
+    [DEPTH_LEVEL] => 1
+    [IS_PARENT] => 
+)
+
+    include < CBitrixComponentTemplate::__IncludePHPTemplate < CBitrixComponentTemplate::IncludeTemplate < CBitrixComponent::showComponentTemplate < CBitrixComponent::includeComponentTemplate
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:708
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:800
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:657
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:605
+	/home/www/ihram.egoshin.net/shared/bitrix/components/bitrix/menu/component.php:373
+----------
+Host: ihram.egoshin.net
+Date: 2016-01-31 15:59:41
+Module: Выгрузка массива $Array
+Array
+(
+    [TEXT] => Воскресная школа
+    [LINK] => /
+    [SELECTED] => 
+    [PERMISSION] => X
+    [ADDITIONAL_LINKS] => Array
+        (
+        )
+
+    [ITEM_TYPE] => D
+    [ITEM_INDEX] => 6
+    [PARAMS] => Array
+        (
+        )
+
+    [DEPTH_LEVEL] => 1
+    [IS_PARENT] => 
+)
+
+    include < CBitrixComponentTemplate::__IncludePHPTemplate < CBitrixComponentTemplate::IncludeTemplate < CBitrixComponent::showComponentTemplate < CBitrixComponent::includeComponentTemplate
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:708
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component_template.php:800
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:657
+	/home/www/ihram.egoshin.net/shared/bitrix/modules/main/classes/general/component.php:605
+	/home/www/ihram.egoshin.net/shared/bitrix/components/bitrix/menu/component.php:373
+----------

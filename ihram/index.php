@@ -105,63 +105,61 @@ $APPLICATION->SetTitle('Главная');
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-5">
-                <h2>Контакты</h2>
+                <?
+                if(CModule::IncludeModule("iblock")):
+                    $arSelect = Array("PROPERTY_address", "PROPERTY_phone", "PROPERTY_phone2", "PROPERTY_email",
+                        "PROPERTY_facebook", "PROPERTY_youtube", "PROPERTY_vk", "PROPERTY_vk_school",
+                        "PROPERTY_vk_group", "PROPERTY_vk_women", "PROPERTY_yandex_map");
+                    $arFilter = Array("IBLOCK_ID"=>1, "ACTIVE"=>"Y");
+                    $res = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
+                    if($ar_res = $res->GetNext()):
+                        $phone1 = $ar_res['PROPERTY_PHONE_VALUE'];
+                        $phone1 = preg_replace("#[^\d]#", "", $phone1);
+                        $phone2 = $ar_res['PROPERTY_PHONE2_VALUE'];
+                        $phone2 = preg_replace("#[^\d]#", "", $phone2);
+                        $yandexMap = $ar_res['~PROPERTY_YANDEX_MAP_VALUE'];
+                ?>
+                <h2><?=GetMessage("MAINPAGE_HEADER_CONTACTS")?></h2>
                 <div class="contacts">
-                    <p><b>Адрес:</b> <br class="visible-xs">111531, г. Москва, ул. Сталеваров, д. 6</p>
-                    <p><b>Телефон:</b> <br class="visible-xs"><a href="callto:+74953007090">+7(495)300-70-90</a></p>
-                    <p><b>Телефон дежурного священника:</b> <br class="visible-xs"><a href="callto:+79162292739">+7(916)229-27-39</a></p>
-                    <p><b>Написать нам:</b> <br class="visible-xs"><a href="mailto:hram-ioana@mail.ru">hram-ioana@mail.ru</a></p>
+                    <p><b><?=GetMessage("CONTACTS_ADDRESS")?></b> <br class="visible-xs"><?=$ar_res['PROPERTY_ADDRESS_VALUE']?></p>
+                    <p><b><?=GetMessage("CONTACTS_PHONE")?></b> <br class="visible-xs"><a href="tel:+<?=$phone1?>"><?=$ar_res['PROPERTY_PHONE_VALUE']?></a></p>
+                    <p><b><?=GetMessage("CONTACTS_PHONE2")?></b> <br class="visible-xs"><a href="tel:+<?=$phone2?>"><?=$ar_res['PROPERTY_PHONE2_VALUE']?></a></p>
+                    <p><b><?=GetMessage("CONTACTS_EMAIL2")?></b> <br class="visible-xs"><a href="mailto:hram-ioana@mail.ru"><?=$ar_res['PROPERTY_EMAIL_VALUE']?></a></p>
                 </div>
                 <div class="page-header hidden-sm hidden-xs"></div>
                 <div class="contacts">
-                    <p><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook fa-lg"></i>Официальная страница храма в Facebook</a></p>
-                    <p><a href="https://www.youtube.com/" target="_blank"><i class="fa fa-youtube fa-lg"></i>Официальная страница храма в YouTube</a></p>
-                    <p><a href="http://vk.com/ivanovskiihram" target="_blank"><i class="fa fa-vk fa-lg"></i>Официальная страница храма в ВКонтакте</a></p>
-                    <p><a href="http://vk.com/club20219492" target="_blank"><i class="fa fa-vk fa-lg"></i>Cтраница воскресной шкколы в ВКонтакте</a></p>
-                    <p><a href="http://vk.com/club2946639" target="_blank"><i class="fa fa-vk fa-lg"></i>Группа для прихожан храма в ВКонтакте</a></p>
-                    <p><a href="http://vk.com/club7650771" target="_blank"><i class="fa fa-vk fa-lg"></i>Группа для девушек-прихожан храма в ВКонтакте</a></p>
+                    <p><a href="<?=$ar_res['PROPERTY_FACEBOOK_VALUE']?>" target="_blank"><i class="fa fa-facebook fa-lg"></i><?=GetMessage("CONTACTS_FACEBOOK")?></a></p>
+                    <p><a href="<?=$ar_res['PROPERTY_YOUTUBE_VALUE']?>" target="_blank"><i class="fa fa-youtube fa-lg"></i><?=GetMessage("CONTACTS_YOUTUBE")?></a></p>
+                    <p><a href="<?=$ar_res['PROPERTY_VK_VALUE']?>" target="_blank"><i class="fa fa-vk fa-lg"></i><?=GetMessage("CONTACTS_VK")?></a></p>
+                    <p><a href="<?=$ar_res['PROPERTY_VK_SCHOOL_VALUE']?>" target="_blank"><i class="fa fa-vk fa-lg"></i><?=GetMessage("CONTACTS_VK_SCHOOL")?></a></p>
+                    <p><a href="<?=$ar_res['PROPERTY_VK_GROUP_VALUE']?>" target="_blank"><i class="fa fa-vk fa-lg"></i><?=GetMessage("CONTACTS_VK_GROUP")?></a></p>
+                    <p><a href="<?=$ar_res['PROPERTY_VK_WOMEN_VALUE']?>" target="_blank"><i class="fa fa-vk fa-lg"></i><?=GetMessage("CONTACTS_VK_WOMEN")?></a></p>
                 </div>
             </div>
+            <?
+                    endif;
+                endif;
+            ?>
             <div class="col-xs-12 col-md-offset-1 col-md-6">
-                <h2 class="text-center">Напишите нам</h2>
+                <h2 class="col-xs-12 col-md-offset-3 col-md-9 text-center"><?=GetMessage("MAINPAGE_HEADER_WRITEME")?></h2>
                 <div class="feedback">
-                    <form class="form-horizontal" action="/" method="post" role="form">
-                        <div class="form-group">
-                            <label for="name" class="col-xs-12 col-md-2 control-label">Имя:</label>
-                            <div class="col-xs-12 col-md-10">
-                                <input type="text" class="form-control" name="name" id="name">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone" class="col-xs-12 col-md-2 control-label">Телефон:</label>
-                            <div class="col-xs-12 col-md-10">
-                                <input type="text" class="form-control" name="phone" id="phone">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="col-xs-12 col-md-2 control-label">Email:</label>
-                            <div class="col-xs-12 col-md-10">
-                                <input type="text" class="form-control" name="email" id="email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message" class="col-xs-12 col-md-2 control-label">Сообщение:</label>
-                            <div class="col-xs-12 col-md-10">
-                                <textarea class="form-control" name="message" id="message" rows="5"></textarea>
-                            </div>
-                        </div>
-                        <div class="text-right">
-                            <button type="submit" class="btn btn-success">Отправить</button>
-                        </div>
-                    </form>
+                    <?$APPLICATION->IncludeComponent("ihram:main.feedback", "main", Array(
+                        "COMPONENT_TEMPLATE" => ".default",
+                        "EMAIL_TO" => "me@egoshin.net",	// E-mail, на который будет отправлено письмо
+                        "EVENT_MESSAGE_ID" => "",	// Почтовые шаблоны для отправки письма
+                        "OK_TEXT" => "Спасибо, ваше сообщение принято.",	// Сообщение, выводимое пользователю после отправки
+                        "REQUIRED_FIELDS" => "",	// Обязательные поля для заполнения
+                        "USE_CAPTCHA" => "Y",	// Использовать защиту от автоматических сообщений (CAPTCHA) для неавторизованных пользователей
+                    ),
+                        false
+                    );?>
                 </div>
             </div>
         </div>
     </div>
-    <!-- /.container -->
 </div>
 <div class="map img-responsive">
-    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=e8Z8-NQ92AWhamRPrchmMfAOizlz87tO&width=100%&height=400&lang=ru_RU&sourceType=constructor"></script>
+    <?=$yandexMap?>
 </div>
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/footer.php');

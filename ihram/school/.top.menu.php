@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"О школе", 
+		"/school/about-school/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Преподаватели", 
+		"/school/prepodavateli/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Правила", 
+		"/school/pravila/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"События", 
+		"/school/sobytiya/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Фото", 
+		"/school/photo/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Видео", 
+		"/school/video/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Храм", 
+		"/hram/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

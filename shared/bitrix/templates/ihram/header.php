@@ -50,31 +50,36 @@ IncludeTemplateLangFile(__FILE__);
 			<?$APPLICATION->ShowPanel();?>
 		</div>
 		<header role="banner">
-			<!-- Fixed navbar -->
 			<div class="navbar navbar-default" role="navigation">
 				<div class="container-fluid">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
+							<span class="sr-only"><?=GetMessage("HEADER_SR_ONLY")?></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
 						<a class="navbar-brand" href="<?=SITE_DIR?>">
-							<img src="<?=SITE_TEMPLATE_PATH?>/img/logotype.png" alt="Храм Рождества Иоанна Предтечи в Ивановском">
+							<img src="<?=SITE_TEMPLATE_PATH?>/img/logotype.png" alt="<?=GetMessage("HEADER_LOGOTYPE_ALT")?>">
 						</a>
 					</div>
 					<div class="collapse navbar-collapse navbar-right">
-						<ul class="nav navbar-nav">
-							<li class="active"><a class="bg-color-1" href="#">О храме</a></li>
-							<li><a class="bg-color-2" href="#">Духовенство</a></li>
-							<li><a class="bg-color-3" href="#">События</a></li>
-							<li><a class="bg-color-4" href="#">Фото</a></li>
-							<li><a class="bg-color-1" href="#">Видео</a></li>
-							<li><a class="bg-color-2" href="#">Контакты</a></li>
-							<li><a href="#">Воскресная школа  <i class="fa fa-angle-double-right"></i></a></li>
-						</ul>
-					</div><!--/.nav-collapse -->
+                        <?$APPLICATION->IncludeComponent("bitrix:menu", "main", Array(
+                            "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+                            "CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+                            "COMPONENT_TEMPLATE" => ".default",
+                            "DELAY" => "N",	// Откладывать выполнение шаблона меню
+                            "MAX_LEVEL" => "1",	// Уровень вложенности меню
+                            "MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
+                            "MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+                            "MENU_CACHE_TYPE" => "N",	// Тип кеширования
+                            "MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+                            "ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+                            "USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+                        ),
+                            false
+                        );?>
+					</div>
 				</div>
 			</div>
 		</header>

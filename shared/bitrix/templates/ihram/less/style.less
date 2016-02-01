@@ -26,11 +26,10 @@ footer {
   @media (max-width: @screen-xs-max) {height: 150px;}
   background-color: #f5f5f5;
 }
-a:hover, a:focus {text-decoration: none;}
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
-
+a:hover, a:focus {text-decoration: none;}
 body > .container {
   padding: 30px 15px 0;
 }
@@ -251,5 +250,34 @@ footer {
   }
   @media (max-width: @screen-sm-max) {
 
+  }
+}
+.mfeedback {
+  padding: 0 0 0 5px;
+}
+.btn-block-feedback {
+  padding-top: 20px;
+}
+.btn-feedback {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.captcha_block {
+  .captcha_word {
+    height: 38px;
+    color: #555555;
+  }
+  @media (max-width: @screen-sm-max) {
+    text-align: center;
+    .captcha_word {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+  }
+}
+.requre-field-message {
+  margin-bottom: 15px;
+  @media (max-width: @screen-sm-max) {
+    text-align: center;
   }
 }

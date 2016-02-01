@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Правила";
+$arDirProperties = Array(
+
+);
+?>

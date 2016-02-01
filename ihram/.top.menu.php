@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"О храме", 
+		"/hram/about-hram/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Духовенство", 
+		"/hram/dukhovenstvo/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"События", 
+		"/hram/sobytiya/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Фото", 
+		"/hram/photo/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Видео", 
+		"/hram/video/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/hram/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Воскресная школа", 
+		"/school/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

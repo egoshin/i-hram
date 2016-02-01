@@ -8604,13 +8604,13 @@ footer {
     height: 150px;
   }
 }
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
 a:hover,
 a:focus {
   text-decoration: none;
 }
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
 body > .container {
   padding: 30px 15px 0;
 }
@@ -8873,5 +8873,36 @@ footer .social {
   }
   .contact-block .feedback label {
     text-align: left;
+  }
+}
+.mfeedback {
+  padding: 0 0 0 5px;
+}
+.btn-block-feedback {
+  padding-top: 20px;
+}
+.btn-feedback {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.captcha_block .captcha_word {
+  height: 38px;
+  color: #555555;
+}
+@media (max-width: 991px) {
+  .captcha_block {
+    text-align: center;
+  }
+  .captcha_block .captcha_word {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.requre-field-message {
+  margin-bottom: 15px;
+}
+@media (max-width: 991px) {
+  .requre-field-message {
+    text-align: center;
   }
 }

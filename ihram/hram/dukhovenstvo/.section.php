@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Духовенство";
+$arDirProperties = Array(
+
+);
+?>
