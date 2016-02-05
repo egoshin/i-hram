@@ -14,8 +14,15 @@ body {
   margin-bottom: 50px;
   @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {margin-bottom: 80px;}
   @media (max-width: @screen-xs-max) {margin-bottom: 150px;}
+  background-color: #254888;
+}
+h1 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  @media (max-width: @screen-xs-max) {text-align: center;}
 }
 h2 {text-transform: uppercase;}
+.bold {font-weight: bold;}
 footer {
   position: absolute;
   bottom: 0;
@@ -29,7 +36,23 @@ footer {
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
+.btn-default {  background-color: #f5f5f5;}
+.breadcrumb-block {
+  padding-top: 10px !important;
+  .breadcrumb {
+    padding: 0 15px;
+    background-color: transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+    .active {color: #aaa;}
+    a {
+      color: #fff;
+      &:hover, &:focus {color: darken(#fff, 20%);}
+    }
+  }
+}
 a:hover, a:focus {text-decoration: none;}
+.mb20 {margin-bottom: 20px;}
 body > .container {
   padding: 30px 15px 0;
 }
@@ -186,21 +209,24 @@ footer {
 .opacity7 {.opacity(0.7);}
 .opacity8 {.opacity(0.8);}
 .opacity9 {.opacity(0.9);}
-.hram-bg {
-  background: url("../img/hram-bg.jpg") no-repeat top center;
-  background-size: cover;
+.hram-bg, .hram-bg-main {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.block-opacity {
-  background: rgba(230, 244, 255, 0.6);
+.block-opacity, .block-page {
   border-radius: 4px;
   border: 1px solid transparent;
   padding: 15px;
   margin-bottom: 20px;
+}
+.block-opacity {background: rgba(230, 244, 255, 0.6);}
+.block-page {
+  background: #fafafa;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 .menu-hram {
   a {
@@ -227,29 +253,15 @@ footer {
       color: darken(#fff, 10%);
     }
   }
-  .contacts, .feedback {
-    margin-top: 20px;
-    a {
-      .fa {
-        margin-right: 20px;
-        width: 20px;
-      }
-    }
-  }
   .page-header {margin: 20px 0 20px;}
-  @media (max-width: @screen-sm-max) {
-    h2, .text-right {text-align: center;}
-    .contacts {
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
+}
+.contacts, .feedback {
+  margin-top: 20px;
+  a {
+    .fa {
+      margin-right: 20px;
+      width: 20px;
     }
-    .feedback {
-      label {text-align: left;}
-    }
-  }
-  @media (max-width: @screen-sm-max) {
-
   }
 }
 .mfeedback {
@@ -280,4 +292,90 @@ footer {
   @media (max-width: @screen-sm-max) {
     text-align: center;
   }
+}
+@media (max-width: @screen-sm-max) {
+  .contacts {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .feedback {
+    label {text-align: left !important;}
+  }
+  .captcha-enter {text-align: center;}
+}
+.line-bottom {
+  border-bottom: 1px solid #ddd;
+  margin-top: -20px;
+}
+.line-bottom-media {
+  border-bottom: 1px solid #ddd;
+  margin-top: 20px;
+}
+.error404 {
+  margin-top: 100px;
+  padding: 60px 0 100px;
+  .text404 {
+    font-size: 60px;
+    color: #2860C7;
+    span {
+      font-weight: bold;
+      font-size: 80px;
+    }
+  }
+  p {
+    font-size: 20px;
+    color: #2860C7;
+  }
+  a {
+    padding: 10px 70px;
+    text-transform: uppercase;
+    margin-top: 30px;
+  }
+}
+.btn-raspisanie {
+  a {margin-top: 15px;}
+  @media (max-width: @screen-xs-max) {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+.duhovenstvo {
+  .panel {
+    height: 298px;
+  }
+  img {
+    width: 200px;
+    height: 300px;
+  }
+  @media (max-width: @screen-xs-max) {
+    .media-left {
+      text-align: center;
+      display: block;
+    }
+    .media-body {
+      clear: both;
+      display: block;
+      width: auto;
+      h4 {text-align: center;}
+    }
+  }
+}
+.img-about {
+  margin: 40px auto;
+}
+.top-nav-rasp, .bottom-nav-rasp {
+  .text-left {padding-left: 40px;}
+  .text-right {padding-right: 40px;}
+  @media (max-width: @screen-xs-max) {
+    >div {text-align: center !important;}
+  }
+}
+.top-nav-rasp {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.bottom-nav-rasp {
+  margin-bottom: 20px;
+  margin-top: 10px;
 }

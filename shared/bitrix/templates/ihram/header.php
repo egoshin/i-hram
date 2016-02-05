@@ -83,4 +83,5 @@ IncludeTemplateLangFile(__FILE__);
 				</div>
 			</div>
 		</header>
-		<div class="hram-bg"></div>
+	<?$imgBackgrond = $APPLICATION->GetFileRecursive("bg.jpg");?>
+		<div class="hram-bg hidden-xs hidden-sm" style="background: url('<?=$imgBackgrond?>') no-repeat top center;background-size: cover;"></div>

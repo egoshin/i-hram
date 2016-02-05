@@ -66,7 +66,7 @@ if(!defined("B_PROLOG_INCLUDED")||B_PROLOG_INCLUDED!==true)die();
 							<input type="hidden" name="captcha_sid" value="<?=$arResult["capCode"]?>">
 							<img src="/bitrix/tools/captcha.php?captcha_sid=<?=$arResult["capCode"]?>" width="160" height="40" alt="CAPTCHA">
 						</div>
-						<div class="col-xs-12 col-md-6 text-right">
+						<div class="col-xs-12 col-md-6 text-right captcha-enter">
 							<input class="captcha_word" type="text" name="captcha_word" value="">
 						</div>
 					</div>

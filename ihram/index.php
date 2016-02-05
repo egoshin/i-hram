@@ -1,6 +1,5 @@
 <?
 require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
-$APPLICATION->SetTitle('Главная');
 ?>
 <div class="container">
     <div class="row">
@@ -8,71 +7,92 @@ $APPLICATION->SetTitle('Главная');
             <div class="block-opacity main-rasp">
                 <h2 class="text-center">Расписание богослужений</h2>
                 <div class="overflow-table">
-                    <div class="panel panel-danger">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">18.01.2016 Понедельник. Праздник иконы Божией Матери Знамение.</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-xs-2">
-                                    <p>09<sup>00</sup></p>
-                                    <p>16<sup>00</sup></p>
+                    <?
+                    if(CModule::IncludeModule("iblock")):
+                        $arSelect = Array("NAME", "PREVIEW_PICTURE", "PROPERTY_date","PROPERTY_holiday", "PROPERTY_service_time_1",
+                            "PROPERTY_service_add_1", "PROPERTY_service2", "PROPERTY_service_time_2", "PROPERTY_service_add_2",
+                            "PROPERTY_service3", "PROPERTY_service_time_3", "PROPERTY_service_add_3", "PROPERTY_holiday_description",
+                            "PROPERTY_bottom");
+                        $arFilter = Array("IBLOCK_ID"=>4, "ACTIVE"=>"Y", ">=PROPERTY_date"=>date('Y-m-d'));
+                        $arOrder = Array("PROPERTY_date"=>"ASC");
+                        $res = CIBlockElement::GetList($arOrder, $arFilter, false, false, $arSelect);
+                        $count = 1;
+                        while($arFields = $res->GetNext()):
+                            $icon = CFile::GetFileArray($arFields["PREVIEW_PICTURE"]);
+                            $date = $arFields["PROPERTY_DATE_VALUE"];
+                            setlocale(LC_ALL, 'ru_RU.UTF-8');
+                            $week = strftime("%A",strtotime($date));
+                            if($arFields["PROPERTY_HOLIDAY_VALUE"] == "Да") {
+                                $fontColor = "#a94442";
+                            }
+                            else {
+                                $fontColor = "#31708f";
+                            }
+                            if($week == "Воскресенье") {
+                                $panelColor = "panel-danger";
+                                $fontColor = "#a94442";
+                            }
+                            else {
+                                $panelColor = "panel-default";
+                            }
+                            ?>
+                            <div class="panel <?=$panelColor?>">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title bold" style="color: <?=$fontColor?>;"><?=$date?>. <?=$week?>.<br><br><?=$arFields["PROPERTY_HOLIDAY_DESCRIPTION_VALUE"]["TEXT"]?></h3>
                                 </div>
-                                <div class="col-xs-4">
-                                    <p>Божественная литургия</p>
-                                    <p>Вечернее бдение</p>
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-2 hidden-xs hidden-sm">
+                                            <img class="img-responsive" src="<?=$icon["SRC"]?>" alt="<?=$icon["DESCRIPTION"]?>">
+                                        </div>
+                                        <div class="col-xs-12 col-md-10">
+                                            <div class="row">
+                                                <div class="col-xs-3 col-sm-2">
+                                                    <p class="bold"><?=$arFields["PROPERTY_SERVICE_TIME_1_VALUE"]?></p>
+                                                </div>
+                                                <div class="ol-xs-9 col-sm-4">
+                                                    <p class="bold"><?=$arFields["NAME"]?></p>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-6">
+                                                    <p class=""><?=$arFields["PROPERTY_SERVICE_ADD_1_VALUE"]["TEXT"]?></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-3 col-sm-2">
+                                                    <p class="bold"><?=$arFields["PROPERTY_SERVICE_TIME_2_VALUE"]?></p>
+                                                </div>
+                                                <div class="col-xs-9 col-sm-4">
+                                                    <p class="bold"><?=$arFields["PROPERTY_SERVICE2_VALUE"]?></p>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-6">
+                                                    <p class=""><?=$arFields["PROPERTY_SERVICE_ADD_2_VALUE"]["TEXT"]?></p>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-3 col-sm-2">
+                                                    <p class="bold"><?=$arFields["PROPERTY_SERVICE_TIME_3_VALUE"]?></p>
+                                                </div>
+                                                <div class="ccol-xs-9 col-sm-4">
+                                                    <p class="bold"><?=$arFields["PROPERTY_SERVICE3_VALUE"]?></p>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-6">
+                                                    <p class=""><?=$arFields["PROPERTY_SERVICE_ADD_3_VALUE"]["TEXT"]?></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-xs-6">
-                                    <p>По окончании Литургии Крестный ход.</p>
-                                </div>
+                                <div class="panel-footer text-danger"><?=$arFields["PROPERTY_BOTTOM_VALUE"]["TEXT"]?></div>
                             </div>
-                        </div>
-                        <div class="panel-footer">Успенский пост</div>
-                    </div>
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">18.01.2016 Понедельник.</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-xs-2">
-                                    <p>09<sup>00</sup></p>
-                                    <p>16<sup>00</sup></p>
-                                </div>
-                                <div class="col-xs-4">
-                                    <p>Божественная литургия</p>
-                                    <p>Вечернее бдение</p>
-                                </div>
-                                <div class="col-xs-6">
-                                    <p>По окончании Литургии Крестный ход.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel-footer">Успенский пост</div>
-                    </div>
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">18.01.2016 Понедельник.</h3>
-                        </div>
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-xs-2">
-                                    <p>09<sup>00</sup></p>
-                                    <p>16<sup>00</sup></p>
-                                </div>
-                                <div class="col-xs-4">
-                                    <p>Божественная литургия</p>
-                                    <p>Вечернее бдение</p>
-                                </div>
-                                <div class="col-xs-6">
-                                    <p>По окончании Литургии Крестный ход.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="panel-footer">Успенский пост</div>
-                    </div>
+                            <?
+                            $count++;
+                            if($count > 3) break;
+                            //if($week == "Воскресенье") break;
+                        endwhile;
+                    endif;
+                    ?>
                 </div>
-                <p class="text-center"><a class="btn btn-primary btn-lg" href="#" role="button">Полное расписание богослужений</a></p>
+                <p class="text-center"><a class="btn btn-primary btn-lg" href="<?=SITE_DIR?>hram/raspisanie/" role="button"><?=GetMessage("BTN_SHEDULE_SERVICE_FULL")?></a></p>
             </div>
         </div>
         <div class="col-xs-12 col-sm-5 col-md-4">
