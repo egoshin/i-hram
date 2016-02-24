@@ -16,13 +16,16 @@ $itemSize = count($arResult);
 for($index = 0; $index < $itemSize; $index++)
 {
 	$title = htmlspecialcharsex($arResult[$index]["TITLE"]);
-	if($arResult[$index]["LINK"] <> "" && $index != $itemSize-1)
-	{
-		$strReturn .= '<li><a href="'.$arResult[$index]["LINK"].'" title="'.$title.'">'.$title.'</a></li>';
+	if($index == 1) {
+		//$strReturn .= '<li class="active">'.$title.'</li>';
 	}
-	else
-	{
-		$strReturn .= '<li class="active">'.$title.'</li>';
+	else {
+		if($arResult[$index]["LINK"] <> "" && $index != $itemSize-1) {
+			$strReturn .= '<li><a href="'.$arResult[$index]["LINK"].'" title="'.$title.'">'.$title.'</a></li>';
+		}
+		else {
+			$strReturn .= '<li class="active">'.$title.'</li>';
+		}
 	}
 }
 $strReturn .= '</ol>';

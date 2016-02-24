@@ -1,5 +1,5 @@
 <?
-$sSectionName = "Видео";
+$sSectionName = "Видеотека";
 $arDirProperties = Array(
 
 );

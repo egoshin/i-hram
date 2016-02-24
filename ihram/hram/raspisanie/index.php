@@ -51,7 +51,10 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                 $from = date('Y-m-d', $curDate);
                                 $endDate = date('Y-m-d', strtotime($from.'+'.$interval.' day'));
                                 $wd = 7 - date('w');
-                                $to = date('Y-m-d', strtotime($from.'+'.$wd.' day'));
+                                if(date('w') == 0)
+                                    $to = $from;
+                                else
+                                    $to = date('Y-m-d', strtotime($from.'+'.$wd.' day'));
                                 $countweek = 1;
                                 $arWeekBegin[$countweek] = $from;
                                 $arWeekEnd[$countweek] = $to;
@@ -72,7 +75,10 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                     $from = date('Y-m-d', $curDate);
                                     $endDate = date('Y-m-d', strtotime($from.'+'.$interval.' day'));
                                     $wd = 7 - date('w');
-                                    $to = date('Y-m-d', strtotime($from.'+'.$wd.' day'));
+                                    if(date('w') == 0)
+                                        $to = $from;
+                                    else
+                                        $to = date('Y-m-d', strtotime($from.'+'.$wd.' day'));
                                 }
                                 $arSelect = Array("NAME", "PREVIEW_PICTURE", "PROPERTY_date","PROPERTY_holiday", "PROPERTY_service_time_1",
                                     "PROPERTY_service_add_1", "PROPERTY_service2", "PROPERTY_service_time_2", "PROPERTY_service_add_2",
