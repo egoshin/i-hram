@@ -96,16 +96,18 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                         <?endif;?>
                                     </div>
                                     <div class="col-xs-6 col-md-6 text-right">
-                                        <?if(trim($_REQUEST["week"]) != $countweek):
+                                        <?if(trim($_REQUEST["week"]) < $countweek):
                                             if(isset($_REQUEST["week"])):?>
                                                 <a class="btn btn-default" href="<?=SITE_DIR?>hram/raspisanie/?week=<?=trim($_REQUEST["week"])+1?>" role="button">
                                                     <span class="hidden-xs"><?=GetMessage("BTN_NEXT")?>&nbsp;&nbsp;</span><i class="fa fa-long-arrow-right"></i>
                                                 </a>
-                                            <?else:?>
-                                                <a class="btn btn-default" href="<?=SITE_DIR?>hram/raspisanie/?week=2" role="button">
-                                                    <span class="hidden-xs"><?=GetMessage("BTN_NEXT")?>&nbsp;&nbsp;</span><i class="fa fa-long-arrow-right"></i>
-                                                </a>
-                                            <?endif;
+                                            <?else:
+                                                if ($countweek != 1):?>
+                                                    <a class="btn btn-default" href="<?=SITE_DIR?>hram/raspisanie/?week=2" role="button">
+                                                        <span class="hidden-xs"><?=GetMessage("BTN_NEXT")?>&nbsp;&nbsp;</span><i class="fa fa-long-arrow-right"></i>
+                                                    </a>
+                                                <?endif;
+                                            endif;
                                         endif;?>
                                     </div>
                                 </div>
@@ -189,16 +191,18 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                                     <?endif;?>
                                 </div>
                                 <div class="col-xs-6 col-md-6 text-right">
-                                    <?if(trim($_REQUEST["week"]) != $countweek):
+                                    <?if(trim($_REQUEST["week"]) < $countweek):
                                         if(isset($_REQUEST["week"])):?>
                                             <a class="btn btn-default" href="<?=SITE_DIR?>hram/raspisanie/?week=<?=trim($_REQUEST["week"])+1?>" role="button">
                                                 <span class="hidden-xs"><?=GetMessage("BTN_NEXT")?>&nbsp;&nbsp;</span><i class="fa fa-long-arrow-right"></i>
                                             </a>
-                                        <?else:?>
-                                            <a class="btn btn-default" href="<?=SITE_DIR?>hram/raspisanie/?week=2" role="button">
-                                                <span class="hidden-xs"><?=GetMessage("BTN_NEXT")?>&nbsp;&nbsp;</span><i class="fa fa-long-arrow-right"></i>
-                                            </a>
-                                        <?endif;
+                                        <?else:
+                                            if ($countweek != 1):?>
+                                                <a class="btn btn-default" href="<?=SITE_DIR?>hram/raspisanie/?week=2" role="button">
+                                                    <span class="hidden-xs"><?=GetMessage("BTN_NEXT")?>&nbsp;&nbsp;</span><i class="fa fa-long-arrow-right"></i>
+                                                </a>
+                                            <?endif;
+                                        endif;
                                     endif;?>
                                 </div>
                             </div>

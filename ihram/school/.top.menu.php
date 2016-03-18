@@ -44,7 +44,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Храм", 
-		"/hram/", 
+		"/", 
 		Array(), 
 		Array(), 
 		"" 

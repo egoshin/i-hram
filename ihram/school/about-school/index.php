@@ -30,7 +30,16 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     <div class="line-bottom"></div>
                     <div class="row">
                         <div class="col-xs-12">
-                            Здесь должно быть содержимое страницы...
+							<?
+							if(CModule::IncludeModule("iblock")) {
+								$arSelect = Array("DETAIL_TEXT");
+								$arFilter = Array("IBLOCK_ID"=>9, "ACTIVE"=>"Y");
+								$res = CIBlockElement::GetList(Array(), $arFilter, false, false, $arSelect);
+								if($ar_res = $res->GetNext()) {
+									echo $ar_res['DETAIL_TEXT'];
+								}
+							}
+							?>
                         </div>
                     </div>
                 </div>

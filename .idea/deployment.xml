@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="ihram" deleteMissingItems="true" createEmptyFolders="true" promptOnLocalOverwrite="false">
+    <serverData>
+      <paths name="ihram">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/shared/bitrix/admin" />
+            <excludedPath path="/shared/bitrix/cache" />
+            <excludedPath path="/shared/bitrix/css" />
+            <excludedPath path="/shared/bitrix/fonts" />
+            <excludedPath path="/shared/bitrix/gadgets" />
+            <excludedPath path="/shared/bitrix/image_uploader" />
+            <excludedPath path="/shared/bitrix/images" />
+            <excludedPath path="/shared/bitrix/js" />
+            <excludedPath path="/shared/bitrix/managed_cache" />
+            <excludedPath path="/shared/bitrix/modules" />
+            <excludedPath path="/shared/bitrix/otp" />
+            <excludedPath path="/shared/bitrix/panel" />
+            <excludedPath path="/shared/bitrix/sounds" />
+            <excludedPath path="/shared/bitrix/themes" />
+            <excludedPath path="/shared/bitrix/tmp" />
+            <excludedPath path="/shared/bitrix/tools" />
+            <excludedPath path="/shared/bitrix/updates" />
+            <excludedPath path="/shared/bitrix/wizards" />
+            <excludedPath path="/shared/bitrix/.access.php" />
+            <excludedPath path="/shared/bitrix/.settings.php" />
+            <excludedPath path="/shared/bitrix/coupon_activation.php" />
+            <excludedPath path="/shared/bitrix/footer.php" />
+            <excludedPath path="/shared/bitrix/header.php" />
+            <excludedPath path="/shared/bitrix/index.php" />
+            <excludedPath path="/shared/bitrix/license_key.php" />
+            <excludedPath path="/shared/bitrix/p3p.xml" />
+            <excludedPath path="/shared/bitrix/rss.php" />
+            <excludedPath path="/shared/bitrix/site_checker_ed35e93f1ae43ef4f89e104eb334a8af.log" />
+            <excludedPath path="/shared/bitrix/spread.php" />
+            <excludedPath path="/shared/bitrix/urlrewrite.php" />
+            <excludedPath path="/shared/bitrix/virtual_file_system.php" />
+            <excludedPath path="/shared/bitrix/web.config" />
+            <excludedPath path="/shared/bitrix/templates/.default" />
+            <excludedPath path="/shared/bitrix/components/bitrix" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

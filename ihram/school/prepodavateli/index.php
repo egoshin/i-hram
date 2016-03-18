@@ -30,7 +30,33 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
                     <div class="line-bottom"></div>
                     <div class="row">
                         <div class="col-xs-12">
-                            Здесь должно быть содержимое страницы...
+                            <?
+                            if(CModule::IncludeModule("iblock")):
+                                $arSelect = Array("NAME", "DETAIL_TEXT", "DETAIL_PICTURE");
+                                $arFilter = Array("IBLOCK_ID"=>10, "ACTIVE"=>"Y");
+                                $arOrder = Array("SORT"=>"ASC");
+                                $res = CIBlockElement::GetList($arOrder, $arFilter, false, false, $arSelect);
+                                $count = CIBlock::GetElementCount(3);
+                                $num = 1;
+                                while($arFields = $res->GetNext()):
+                                    $foto = CFile::GetFileArray($arFields["DETAIL_PICTURE"]);?>
+                                    <div class="media duhovenstvo">
+                                        <a class="media-left" href="#">
+                                            <img src="<?=$foto["SRC"]?>" alt="<?=$foto["DESCRIPTION"]?>">
+                                        </a>
+                                        <div class="media-body">
+                                            <h4 class="media-heading"><?=$arFields["NAME"]?></h4>
+                                            <?=$arFields["DETAIL_TEXT"]?>
+                                        </div>
+                                    </div>
+                                    <?if($num != $count):?>
+                                    <div class="line-bottom-media visible-xs"></div>
+                                    <?
+                                    endif;
+                                    $num++;
+                                endwhile;
+                            endif;
+                            ?>
                         </div>
                     </div>
                 </div>

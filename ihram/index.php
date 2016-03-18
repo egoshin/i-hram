@@ -155,10 +155,11 @@ require($_SERVER['DOCUMENT_ROOT'].'/bitrix/header.php');
                         "SET_STATUS_404" => "N",	// Устанавливать статус 404
                         "SET_TITLE" => "N",	// Устанавливать заголовок страницы
                         "SHOW_404" => "N",	// Показ специальной страницы
-                        "SLIDER_PROPERTY" => "",	// Свойство с изображениями для слайдера
-                        "SORT_BY1" => "ACTIVE_FROM",	// Поле для первой сортировки новостей
-                        "SORT_BY2" => "SORT",	// Поле для второй сортировки новостей
-                        "SORT_ORDER1" => "DESC",	// Направление для первой сортировки новостей
+                        "SLIDER_PROPERTY" => "",
+                        "SORT_BY1" => "PROPERTY_UP_IS_ANNOUNCEMENT",
+                        "SORT_BY2" => "ACTIVE_FROM",
+                        "SORT_ORDER1" => "DESC",
+                        "SORT_ORDER2" => "DESC",	// Направление для первой сортировки новостей
                         "SORT_ORDER2" => "ASC",	// Направление для второй сортировки новостей
                         "TEMPLATE_THEME" => "blue",	// Цветовая тема
                         "USE_RATING" => "N",	// Разрешить голосование

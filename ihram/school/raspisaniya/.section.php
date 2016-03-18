@@ -1,6 +1,6 @@
 <?
-$sSectionName = "Расписания";
-$arDirProperties = Array(
+$sSectionName = "Расписания занятий";
+$arDirProperties = array(
 
 );
 ?>

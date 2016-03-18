@@ -18,7 +18,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 				<ul class="list-inline social">
 					<li><a href="<?=$ar_res['PROPERTY_FACEBOOK_VALUE']?>" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
 					<li><a href="<?=$ar_res['PROPERTY_VK_VALUE']?>" target="_blank"><i class="fa fa-vk fa-2x"></i></a></li>
-					<li><a href="<?=$ar_res['PROPERTY_YOUTUBE_VALUE']?>"><i class="fa fa-youtube fa-2x"></i></a></li>
+					<li><a href="<?=$ar_res['PROPERTY_YOUTUBE_VALUE']?>" target="_blank"><i class="fa fa-youtube fa-2x"></i></a></li>
 				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-4 text-center">
